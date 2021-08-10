@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+/* scroll */
+body {
+  background-color: #fff;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f1c383;
+  border-radius: 100px;
+}
+/*  Main */
+.container {
+  background-color: #ecd5ac;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 45px;
+  color: #000;
+}
+.title span {
+  color: #e69c2d;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a i {
+  margin-left: 5px;
+}
+figcaption {
+  width: 100%;
+  object-fit: cover;
+}
+figcaption img {
+  width: 100%;
+}
+/* Search section */
+#Search {
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+}
+#Search p {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  font-weight: bold;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  width: 40px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 5px;
+  border:2px solid #e69c2d;
+  margin: 10px;
+}
+/*  Cards  */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+.card {
+  width: 30%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.historyTitle {
+  color: #ce9e5b;
+  font-weight: bold;
+  font-size: 22px;
+}
+.historyText {
+  padding: 5px;
+  line-height: 1.6;
+  color: #915527;
+}
+.historyLink {
+  cursor: pointer;
+  color: #602508;
+}
+@media (max-width: 700px) {
+  #Search {
+    width: 100%;
+  }
+  #Search p {
+    font-size: 1rem;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+  .card {
+    width: 80%;
+    margin: 20px auto;
+  }
+}

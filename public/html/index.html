@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/81c816aea5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="../css/style.css" rel="stylesheet" />
+    <title>History</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav>
+        <h2 class="title">
+          <span>UR</span>
+          -History
+        </h2>
+
+        <a href="#serach">
+          Search
+          <i class="fas fa-search"></i>
+        </a>
+      </nav>
+      <div class="this-day">
+        <figcaption>
+          <img
+            src="https://connectnigeria.com/articles/wp-content/uploads/2015/09/Today-In-History2.jpg"
+          />
+        </figcaption>
+      </div>
+      <section id="Search">
+        <p>You can search about what happens in any day</p>
+        <div class="inputs">
+          <label for="day">
+            Day number
+            <input type="text" id="day" />
+          </label>
+          <label for="month">
+            Month number
+            <input type="text" id="month" />
+          </label>
+        </div>
+      </section>
+      <div class="cards-container"></div>
+    </main>
+    <script src="../js/fetchApi.js"></script>
+    <script src="../js/ManipulateDom.js"></script>
+  </body>
+</html>
