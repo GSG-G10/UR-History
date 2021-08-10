@@ -24,6 +24,7 @@ body::-webkit-scrollbar-thumb {
 /*  Main */
 .container {
   background-color: #ecd5ac;
+  height: 100vh;
 }
 nav {
   display: flex;
@@ -36,8 +37,14 @@ nav {
   color: #e69c2d;
 }
 a {
+  height: 1.8rem;
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #000;
   text-decoration: none;
+  font-weight: bolder;
 }
 a i {
   margin-left: 5px;
@@ -53,7 +60,10 @@ figcaption img {
 #Search {
   width: 50%;
   margin: auto;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #Search p {
   font-size: 1.3rem;
@@ -63,24 +73,42 @@ figcaption img {
 }
 .inputs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 15rem;
 }
 label {
   font-weight: bold;
+  font-size: 1.2rem;
   margin: 15px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 input {
-  width: 40px;
-  height: 25px;
+  width: 3rem;
+  height: 4rem;
   border-radius: 5px;
   padding: 5px;
-  border:2px solid #e69c2d;
-  margin: 10px;
+  border: 2px solid #e69c2d;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#SearchBtn{
+  width: 10rem;
+  height: 2rem;
+  background-color: #000;
+  color: #fff;
+}
+#SearchBtn:hover{
+  transition-duration: .5s;
+  background-color: rgb(116, 91, 11);
+  color: #000;
 }
 /*  Cards  */
 .cards-container {
