@@ -1,0 +1,30 @@
+{
+  "name": "ur-history",
+  "version": "1.0.0",
+  "description": "Weak 05 - Express Weak .",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G10/UR-History.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G10/UR-History/issues"
+  },
+  "homepage": "https://github.com/GSG-G10/UR-History#readme"
+}
