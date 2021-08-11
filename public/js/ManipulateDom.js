@@ -1,7 +1,7 @@
 const cardsContainer = document.querySelector('.cards-container');
 const day = document.querySelector('#day');
 const month = document.querySelector('#month');
-const SearchBtn = document.querySelector('#SearchBtn');
+const searchBtn = document.querySelector('#SearchBtn');
 
 const createElement = (tag, className, parentNode) => {
   const tagName = document.createElement(tag);
@@ -21,10 +21,23 @@ const createCards = (title, text, link, year) => {
   cardLink.href = link;
   cardLink.textContent = `link : ${title}`;
 };
-
-SearchBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  cardsContainer.textContent = '';
-  // eslint-disable-next-line no-undef
-  getData(day.value, month.value);
+searchBtn.addEventListener('click', (e) => {
+  if (
+    day.value <= 31
+    && day.value > 0
+    && month.value > 0
+    && month.value <= 12
+  ) {
+    cardsContainer.textContent = '';
+    // eslint-disable-next-line no-undef
+    getData(day.value, month.value);
+  } else {
+    e.preventDefault();
+    cardsContainer.textContent = '';
+    const errMsg = document.createElement('h1');
+    errMsg.textContent = 'You should Enter a valid Date Number';
+    errMsg.style.border = '1px solid black';
+    errMsg.style.color = 'red';
+    cardsContainer.appendChild(errMsg);
+  }
 });
