@@ -21,7 +21,8 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest test/test.js"
+    "test": "jest test/test.js",
+    "dev ":"nodemon src/index.js"
   },
   "repository": {
     "type": "git",

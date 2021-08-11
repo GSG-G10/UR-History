@@ -12,7 +12,7 @@ const createElement = (tag, className, parentNode) => {
 };
 
 // eslint-disable-next-line no-unused-vars
-const createCards = (title, text, link ,year) => {
+const createCards = (title, text, link, year) => {
   const card = createElement('div', 'card', cardsContainer);
   const cardTitle = createElement('p', 'historyTitle', card);
   cardTitle.textContent = `${title}  ${year}`;
