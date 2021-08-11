@@ -21,22 +21,21 @@ const createCards = (title, text, link, year) => {
   cardLink.href = link;
   cardLink.textContent = `link : ${title}`;
 };
-searchBtn.addEventListener('click', (e) => {
-  if (
-    day.value <= 31
-    && day.value > 0
-    && month.value > 0
-    && month.value <= 12
-  ) {
-    cardsContainer.textContent = '';
-    // eslint-disable-next-line no-undef
-    getData(month.value, day.value);
+
+searchBtn.addEventListener('click', () => {
+  if (day.value <= 31 && day.value > 0) {
+    if (month.value > 0 && month.value <= 12) {
+      cardsContainer.textContent = '';
+      // eslint-disable-next-line no-undef
+      getData(month.value, day.value);
+    } else {
+      cardsContainer.textContent = '';
+      // eslint-disable-next-line no-alert
+      alert('Enter a valid month');
+    }
   } else {
-    e.preventDefault();
+    // eslint-disable-next-line no-alert
+    alert('Enter a valid day');
     cardsContainer.textContent = '';
-    const errMsg = createElement('h1', '', cardsContainer);
-    errMsg.textContent = 'You should Enter a valid Date Number';
-    errMsg.style.border = '1px solid black';
-    errMsg.style.color = 'red';
   }
 });
