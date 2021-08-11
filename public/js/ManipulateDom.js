@@ -3,7 +3,6 @@ const day = document.querySelector('#day');
 const month = document.querySelector('#month');
 const SearchBtn = document.querySelector('#SearchBtn');
 
-// get event of current date
 const createElement = (tag, className, parentNode) => {
   const tagName = document.createElement(tag);
   tagName.classList.add(className);
@@ -16,15 +15,13 @@ const createCards = (title, text, link, year) => {
   const card = createElement('div', 'card', cardsContainer);
   const cardTitle = createElement('p', 'historyTitle', card);
   cardTitle.textContent = `${title}  ${year}`;
-  // const cardYear = createElement('p', 'historyYear', card);
-  // cardYear.textContent = `year : ${year}`;
   const cardParagraph = createElement('p', 'historyText', card);
   cardParagraph.textContent = text;
   const cardLink = createElement('a', 'historyLink', card);
   cardLink.href = link;
   cardLink.textContent = `link : ${title}`;
 };
-// eslint-disable-next-line no-undef
+
 SearchBtn.addEventListener('click', (e) => {
   e.preventDefault();
   cardsContainer.textContent = '';
