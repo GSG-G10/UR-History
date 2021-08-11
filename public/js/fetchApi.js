@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-const url = 'https://history.muffinlabs.com/date';
 const today = new Date();
 const cuurentDay = today.getDate();
 const currentMonth = today.getMonth();
@@ -7,14 +6,15 @@ const currentMonth = today.getMonth();
 const displayData = (myData) => {
   for (let i = 0; i < 6; i += 1) {
     // eslint-disable-next-line no-undef
-    createCards(myData.data.Events[i].links[0].title, myData.data.Events[i].text, myData.data.Events[i].links[0].link , myData.data.Events[i].year);
+    createCards(myData.Events[i].links[0].title,
+      myData.Events[i].text, myData.Events[i].links[0].link, myData.Events[i].year);
   }
 };
 
 // eslint-disable-next-line no-unused-vars
 const getData = (month, day) => {
-  fetch(`${url}/${month}/${day}`)
-    .then((data) => data.json())
+  fetch(`/getCard/${month}/${day}`)
+    .then((res) => res.json())
     .then((data) => displayData(data))
     .catch((error) => error);
 };
