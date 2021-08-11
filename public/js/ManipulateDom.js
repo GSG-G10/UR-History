@@ -30,14 +30,13 @@ searchBtn.addEventListener('click', (e) => {
   ) {
     cardsContainer.textContent = '';
     // eslint-disable-next-line no-undef
-    getData(day.value, month.value);
+    getData(month.value, day.value);
   } else {
     e.preventDefault();
     cardsContainer.textContent = '';
-    const errMsg = document.createElement('h1');
+    const errMsg = createElement('h1', '', cardsContainer);
     errMsg.textContent = 'You should Enter a valid Date Number';
     errMsg.style.border = '1px solid black';
     errMsg.style.color = 'red';
-    cardsContainer.appendChild(errMsg);
   }
 });
